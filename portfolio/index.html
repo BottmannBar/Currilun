@@ -263,21 +263,30 @@
 
   <!-- PROJETO 5 -->
   <section class="project">
-    <div class="embed-col">
-      <div class="embed-frame">
+    <div class="embed-col" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="embed-frame" style="aspect-ratio: 16 / 10;">
         <div class="frame-bar">
           <div class="frame-dots"><span></span><span></span><span></span></div>
-          <div class="frame-live"><span class="pulse"></span>interativo</div>
+          <div class="frame-live"><span class="pulse"></span>formulário</div>
         </div>
         <!-- Atenção: apps AppSheet costumam bloquear incorporação via iframe (X-Frame-Options).
              Se a tela ficar em branco ou recusar conexão, troque este bloco por uma imagem
              (print do app) e mantenha só o botão abaixo apontando pro link real. -->
-        <iframe src="https://appsheet.com/start/14d0b592-3635-4e9e-8c29-f079db9ff982?platform=desktop#view=Sistema" loading="lazy" title="Sistema de registro em planilhas"></iframe>
+        <iframe src="https://appsheet.com/start/14d0b592-3635-4e9e-8c29-f079db9ff982?platform=desktop#view=Sistema" loading="lazy" title="Formulário AppSheet"></iframe>
+      </div>
+      <div class="embed-frame" style="aspect-ratio: 16 / 10;">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-live"><span class="pulse"></span>planilha atualiza ao vivo</div>
+        </div>
+        <!-- Troque SEU_GID_AQUI pelo gid da aba "Sistema": abra essa aba na planilha e copie
+             o número depois de #gid= na barra de endereço -->
+        <iframe src="https://docs.google.com/spreadsheets/d/1pQbjOrLeHUrpcJSS2phxBBk1ozbsvijoo1RBUNkIg94/preview?gid=597408343" loading="lazy" title="Aba Sistema da planilha"></iframe>
       </div>
     </div>
     <div class="text-col">
       <h2>Sistema de Registro em Planilhas</h2>
-      <p>Pequeno projeto que captura dados inseridos em um formulário no AppSheet (nome, número, texto e foto) e os registra automaticamente na planilha ao lado, sem necessidade de digitação manual na base.</p>
+      <p>Pequeno projeto que captura dados inseridos em um formulário no AppSheet (nome, número, texto e foto) e os registra automaticamente na planilha logo abaixo, sem necessidade de digitação manual na base. Preencha o formulário e veja a linha aparecer na planilha em tempo real.</p>
       <a class="btn" href="https://appsheet.com/start/14d0b592-3635-4e9e-8c29-f079db9ff982?platform=desktop#view=Sistema" target="_blank" rel="noopener">Ver sistema completo</a>
     </div>
   </section>
