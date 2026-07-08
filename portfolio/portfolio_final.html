@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Matheus Bottmann — Exemplo de Estrutura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --bg: #0b1120;
+    --bg-alt: #131c31;
+    --text: #f5f3ea;
+    --text-muted: #9ca3af;
+    --accent: #22c55e;
+    --border: rgba(255,255,255,0.15);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  h1, h2 { font-family: 'Playfair Display', serif; font-weight: 600; margin: 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Cabeçalho */
+  header.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: var(--accent);
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+  .hero-text h1 {
+    font-size: 34px;
+    display: inline-block;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    background: var(--bg-alt);
+    filter: grayscale(35%);
+  }
+
+  /* Bio */
+  .bio {
+    padding: 32px 0;
+    max-width: 700px;
+    color: var(--text-muted);
+    font-size: 16px;
+  }
+
+  /* Redes sociais */
+  .socials { display: flex; gap: 40px; justify-content: center; padding: 24px 0 48px; }
+  .socials a {
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .socials a:hover { color: var(--accent); }
+  .socials i { font-size: 24px; }
+
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+  /* Blocos de projeto */
+  .project {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    padding: 56px 0;
+  }
+  .project.reverse { flex-direction: row-reverse; }
+  .project .embed-col,
+  .project .text-col { flex: 1; min-width: 0; }
+
+  .embed-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+    display: flex;
+    flex-direction: column;
+  }
+  .frame-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .frame-dots { display: flex; gap: 6px; }
+  .frame-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+  .frame-live { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); }
+  .frame-live .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .embed-frame iframe { width: 100%; flex: 1; border: 0; }
+
+  .text-col h2 { font-size: 24px; margin-bottom: 16px; }
+  .text-col p { color: var(--text-muted); font-size: 15px; margin-bottom: 24px; }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: var(--accent);
+    color: #04140a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+  .btn:hover { background: transparent; color: var(--accent); }
+
+  footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border); }
+  footer p { font-size: 20px; margin-bottom: 20px; }
+
+  @media (max-width: 800px) {
+    .project, .project.reverse { flex-direction: column; }
+    header.hero { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Portfólio</p>
+      <h1>Matheus Bottmann</h1>
+    </div>
+    <img class="avatar" src="foto.jpg" alt="Foto de Matheus Bottmann">
+  </header>
+
+  <p class="bio">
+    Substitua por uma bio curta de 2 a 3 linhas: quem você é, sua área de atuação e o que os projetos abaixo demonstram (ex: automação de planilhas, dashboards e ferramentas internas para operação de vendas).
+  </p>
+
+  <div class="socials">
+    <a href="http://www.linkedin.com/in/matheus-bottmann-2a4a1715a" target="_blank" rel="noopener">
+      <i class="fa-brands fa-linkedin"></i>
+      <span>linkedin</span>
+    </a>
+    <a href="https://www.instagram.com/matheusbottmann/" target="_blank" rel="noopener">
+      <i class="fa-brands fa-instagram"></i>
+      <span>instagram</span>
+    </a>
+    <a href="https://wa.me/5541999410175" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>whatsapp</span>
+    </a>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROJETO 1 -->
+  <section class="project">
+    <div class="embed-col">
+      <div class="embed-frame">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-live"><span class="pulse"></span>interativo</div>
+        </div>
+        <!-- Requer que a planilha esteja com compartilhamento "Qualquer pessoa com o link pode ver" -->
+        <iframe src="https://docs.google.com/spreadsheets/d/1pQbjOrLeHUrpcJSS2phxBBk1ozbsvijoo1RBUNkIg94/preview" loading="lazy" title="Base de dados de gestão financeira"></iframe>
+      </div>
+    </div>
+    <div class="text-col">
+      <h2>Base de Dados de Gestão Financeira</h2>
+      <p>Planilha de gestão financeira completa: faturamento mensal (venda e serviço), controle de estoque (entradas e saídas), livro diário e conciliação. Estruturada com fórmulas avançadas para consolidação automática dos dados, que alimentam o painel de indicadores (próximo projeto).</p>
+      <a class="btn" href="https://docs.google.com/spreadsheets/d/1pQbjOrLeHUrpcJSS2phxBBk1ozbsvijoo1RBUNkIg94/preview" target="_blank" rel="noopener">Ver planilha completa</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJETO 2 -->
+  <section class="project reverse">
+    <div class="embed-col">
+      <div class="embed-frame">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-live"><span class="pulse"></span>interativo</div>
+        </div>
+        <iframe src="https://bottmannbar.github.io/Currilun/" loading="lazy" title="Painel de indicadores"></iframe>
+      </div>
+    </div>
+    <div class="text-col">
+      <h2>Painel de Indicadores (Dashboard)</h2>
+      <p>Dashboard interativo construído em HTML, CSS e JavaScript, sincronizado em tempo real com a planilha do projeto anterior. Exibe indicadores como faturamento, margem de contribuição, giro de estoque e carga tributária.</p>
+      <a class="btn" href="https://bottmannbar.github.io/Currilun/" target="_blank" rel="noopener">Ver dashboard completo</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJETO 3 -->
+  <section class="project">
+    <div class="embed-col">
+      <div class="embed-frame">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-live"><span class="pulse"></span>interativo</div>
+        </div>
+        <iframe src="https://bottmannbar.github.io/brcellferramentas.github.io/Simulador.html" loading="lazy" title="Simulador de preço BRCELL"></iframe>
+      </div>
+    </div>
+    <div class="text-col">
+      <h2>Simulador de Preço (BRCELL)</h2>
+      <p>Projeto feito em colaboração com a empresa BRCELL: um simulador de custo que aplica, via formulário, o padrão de precificação de compra de aparelhos usados, com base em marca, modelo e checklist de estado (tela, bateria, câmera, placa, etc.). Os valores são calculados a partir de uma planilha vinculada e o simulador é usado pelos vendedores no dia a dia da loja.</p>
+      <a class="btn" href="https://bottmannbar.github.io/brcellferramentas.github.io/Simulador.html" target="_blank" rel="noopener">Ver simulador completo</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJETO 4 -->
+  <section class="project reverse">
+    <div class="embed-col">
+      <div class="embed-frame">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-live"><span class="pulse"></span>interativo</div>
+        </div>
+        <iframe src="https://bottmannbar.github.io/brcellferramentas.github.io/cartao.html" loading="lazy" title="Simulador de taxas para vendas com cartão de crédito"></iframe>
+      </div>
+    </div>
+    <div class="text-col">
+      <h2>Simulador de Taxas para Vendas com Cartão de Crédito</h2>
+      <p>Outra necessidade resolvida para a BRCELL: os vendedores precisavam consultar as taxas da máquina de cartão para cada número de parcelas antes de fechar uma venda. Como algumas taxas praticadas eram abusivas, criamos um simulador que calcula o valor a cobrar a partir do valor líquido desejado, com taxas personalizadas que favorecem o cliente no momento da compra — dispensando o uso da maquininha convencional para essa consulta.</p>
+      <a class="btn" href="https://bottmannbar.github.io/brcellferramentas.github.io/cartao.html" target="_blank" rel="noopener">Ver simulador completo</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJETO 5 -->
+  <section class="project">
+    <div class="embed-col">
+      <div class="embed-frame">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-live"><span class="pulse"></span>interativo</div>
+        </div>
+        <!-- Atenção: apps AppSheet costumam bloquear incorporação via iframe (X-Frame-Options).
+             Se a tela ficar em branco ou recusar conexão, troque este bloco por uma imagem
+             (print do app) e mantenha só o botão abaixo apontando pro link real. -->
+        <iframe src="https://appsheet.com/start/14d0b592-3635-4e9e-8c29-f079db9ff982?platform=desktop#view=Sistema" loading="lazy" title="Sistema de registro em planilhas"></iframe>
+      </div>
+    </div>
+    <div class="text-col">
+      <h2>Sistema de Registro em Planilhas</h2>
+      <p>Pequeno projeto que captura dados inseridos em um formulário no AppSheet (nome, número, texto e foto) e os registra automaticamente na planilha ao lado, sem necessidade de digitação manual na base.</p>
+      <a class="btn" href="https://appsheet.com/start/14d0b592-3635-4e9e-8c29-f079db9ff982?platform=desktop#view=Sistema" target="_blank" rel="noopener">Ver sistema completo</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <footer>
+    <p>Vamos conversar?</p>
+    <a class="btn" href="https://wa.me/5541999410175" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
