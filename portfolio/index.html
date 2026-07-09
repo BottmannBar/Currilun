@@ -8,6 +8,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
+.cv-link {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.cv-link:hover { color: var(--accent); }
   :root {
     --bg: #0b1120;
     --bg-alt: #131c31;
@@ -164,6 +176,10 @@
     <div class="hero-text">
       <p class="eyebrow"><i class="fa-solid fa-gear gear-spin" aria-hidden="true"></i>Portfólio</p>
       <h1>Matheus Bottmann</h1>
+<a class="cv-link" href="curriculo.pdf" download>
+  <i class="fa-solid fa-download" aria-hidden="true"></i>
+  Baixar currículo (PDF)
+</a>
     </div>
     <img class="avatar" src="foto.PNG" alt="Foto de Matheus Bottmann">
   </header>
